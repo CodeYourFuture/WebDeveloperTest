@@ -1,0 +1,142 @@
+/*============ Start Global ==============*/
+body{
+    color: #cccccc;
+    font-family: 'Philosopher', sans-serif;
+    text-align: left;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.body-content{
+    background-image: url('../images/containtBackground.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 50px;
+    padding-bottom: 150px;
+}
+/*============ Start Header ==============*/
+.logo{
+    padding: 40px 0 50px 0;
+    font-size: 60px;
+}
+nav .links{
+    list-style: none;
+    margin-bottom: 20px;
+}
+nav .links li{
+    display: inline-block;
+}
+nav .links li a{
+    text-decoration: none;
+    background: #131313;
+    color: #fff;
+    padding: 3px 15px;
+    font-size: 18px;
+    box-shadow: 0px -4px 3px #e2d3d3;
+}
+/*================= first article ======================*/
+article .about-cyf{
+    color: #e91a57;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+article .what-we-do{
+    margin-bottom: 15px;
+}
+article .cyf-devintion{
+    line-height: 1.6em;
+    margin-bottom: 10px;
+    margin-right: 120px;
+}
+article .our-focus{
+    color: #ebdd00;
+    margin-bottom: 15px;
+}
+article .links{
+    color: #fff;
+    margin-left: 20px;
+}
+article .footer{
+    color: #ebdd00;
+    margin: 20px 0;
+}
+article .footer >a{
+    text-decoration: none;
+    color: #fff;
+}
+/*================= Second article ======================*/
+article .news{
+    margin-bottom: 10px;
+}
+article .showHideHeader{
+    color: #e91a57;
+    margin-bottom: 15px;
+}
+article .news-first-pragraph{
+    margin-right: 120px;
+}
+article .news-second-pragraph{
+    margin: 15px 0 15px 120px;
+}
+/*================= Start Section ======================*/
+section h1:first-child{
+    margin: 10px 0;
+}
+section .note{
+    margin-bottom: 20px;
+}
+section .required-field{
+    margin: 10px 0;
+}
+section form input[type='text']{
+    padding: 4px 5px;
+    margin: 5px 0;
+}
+section form input[type='email']{
+    padding: 4px 100px 4px 5px;
+    margin: 5px 0;
+}
+section form input[type='number']{
+    padding: 4px 100px 4px 5px;
+    margin: 5px 0;
+}
+section form button{
+    padding: 3px 4px;
+    margin: 5px 0;
+}
+/*=============== Media query ================*/
+@media (max-width : 391px){
+    nav .links li a{
+    padding: 3px 3px;
+}
+section form input[type='email'],
+section form input[type='number']{
+    padding: 4px 60px 4px 5px;
+}
+/*============ Max-wdth 592 =============*/
+}
+@media (max-width : 592px){
+    .container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+article .cyf-devintion{
+    margin-right: 0;
+}
+article .news-first-pragraph{
+    margin-right: 0;
+}
+article .news-second-pragraph{
+    margin: 15px 0 15px 10px;
+}
+}
