@@ -1,0 +1,124 @@
+
+body{
+    background: url(images/background_image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
+    -webkit-padding-start: 5em;
+    -webkit-padding-end: 5em;  
+}
+.container-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 3px #dbd8db;
+  -moz-box-shadow: 0px 1px 3px #dbd8db;
+  box-shadow: 0px 1px 3px #dbd8db;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  background: #5e6163;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+button.nav-item.active.btn{
+  flex: 1;
+}
+
+button.nav-item.btn{
+  flex: 1;
+}
+.btn:hover {
+  background: #cfd0d1;
+  text-decoration: none;
+}
+
+a.nav-link:link {
+    color:  slategray;
+    text-decoration: none
+}
+
+a.nav-link:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a.nav-link:hover {
+    color: slategray;
+    text-decoration: none;
+}
+
+a.nav-link:active {
+    color: gray;
+    text-decoration: none;
+}
+
+
+ul.navbar-all-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0;
+}
+
+.form
+.hidden>displayInfo {
+    display:none;
+}
+
+.visible>displayInfo {
+    display:block;
+}
+
+@media screen and (min-width: 0px) and (max-width: 370px) {
+
+	img.img-fluid.navbar-brand{
+    -webkit-padding-start: 0px; 
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 250px) {
+  ul.navbar-all-items{
+      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-around;
+      -webkit-padding-start: 0;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 270px) {
+  ul.navbar-all-items{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 281px) {
+  button.nav-item.btn {
+    flex: 0;
+  }
+}
+@media screen and (max-width: 330px) {
+  .container-header{
+    align-items: center;
+    }
+}
