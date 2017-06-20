@@ -1,0 +1,56 @@
+.heading {
+    /*font-family: 'Kaushan Script';*/
+    font-style: cursive;
+}
+
+.whiteFont {
+    color: white;
+}
+.yellow {
+    color: yellow;
+
+}
+
+.red {
+    color: #C91A44;
+
+}
+
+.Italic {
+    font-style: italic;
+
+}
+
+.bordercontainer {
+    /*border: 3px solid blue;*/
+    /*display: flex;*/
+    /*margin-left: 1%;*/
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 35%;
+    padding-top: 2%;
+
+}
+
+.submitbox {
+    /*border: 4px solid hotpink;*/
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.submitform {
+    /*border: 2px solid yellow;*/
+    display: flex;
+    padding-bottom: 1%;
+    padding-top: 2%;
+    padding-right: 23%;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.submitform .width {
+    margin-right: 38%;
+}
+.buttonSize {
+    padding-right: 5%;
+}

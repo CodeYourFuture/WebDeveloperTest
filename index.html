@@ -3,55 +3,70 @@
 <head>
     <meta charset="utf-8" />
     <title>Web Developer Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            background-image: url("background.png");
+        }
+    </style>
 </head>
-<img src="WEBDEVELOPERTEST/background.png" alt="Nice black background and red color touch background" />
-<body>
-    <header>
-        <h1>CYF</h1>
-    </header>
-    <nav-bar>
-        <button>Menue 1</button>
-        <button>Menue 2</button>
-        <button>Menue 3</button>
-    </nav-bar>
-    <h2>About CYF</h2>
-    <h3>What We Do</h3>
-    <p>
-        CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet,
-        whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum
-        dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem
-        ipsum dolor sit amet, whatever.
-    </p>
-    <h4>
-        Our focus
-    </h4>
-    <ul>
-        <li>Interactive</li>
-        <li>Mobile</li>
-        <li>Technology</li>
-    </ul>
-    <p>Click here to download a PDF of our recent work</p>
-    <h3>News</h3>
-    <h4>Show/Hide news item</h4>
-    <p>CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet,
-        whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum
-        dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a
-    </p>
-    <p> "I wanted to do something new and different. Sprite came to me with the idea. I thought it was cool. Withough fans, there's
-        no players".
-    </p>
-    <h3>More Information</h3>
-    <p>For more information about our products and services, please contact us using the form below</p>
-    <p>Items marked * are required fields</p>
-    <form>
-        <p>Contact name *:</p>
-        <input placeholder="Contact name"></input>
-        <p>Contact email address *:</p>
-        <input placeholder="Contact name"></input>
-        <p>Contact phone number: </p>
-        <input placeholder="Contact name"></input>
-        <button>Submit</button>
-    </form>
+<body class="whiteFont">
+    <div class="bordercontainer">
+        <header>
+            <h1 class="heading">CYF</h1>
+        </header>
+        <nav-bar>
+            <button>Menue 1</button>
+            <button>Menue 2</button>
+            <button>Menue 3</button>
+        </nav-bar>
+        <section>
+            <h2 class="aboutCYF red">About CYF</h2>
+        </section>    
+        <article>
+            <h3>What We Do</h3>
+            <p>
+                CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet,
+                whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum
+                dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem
+                ipsum dolor sit amet, whatever.
+            </p>
+            <h4 class="yellow">Our focus</h4>
+            <ul>
+                <li>Interactive</li>
+                <li>Mobile</li>
+                <li>Technology</li>
+            </ul>
+            <p class="yellow Italic">Click here to download a PDF of our recent work</p>
+        </article>
+        <article>
+            <h3>News</h3>
+            <h4 class="red">Show/Hide news item</h4>
+            <p>CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet,
+                whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum
+                dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a
+            </p>
+            <p> "I wanted to do something new and different. Sprite came to me with the idea. I thought it was cool. Withough fans, there's
+                no players".
+            </p>
+        </article>
+        <section>
+            <h3>More Information</h3>
+            <p>For more information about our products and services, please contact us using the form below</p>
+            <p>Items marked * are required fields</p>
+        </section>
+        <div class="submitbox">
+            <form class="submitform">
+                <label>Contact name *:</label><br>
+                <input class = "width" type = "text" placeholder=" "></input><br>
+                <label>Contact email address *:</label><br>
+                <input type = "email" placeholder=" "></input><br>
+                <label>Contact phone number: </label><br>
+                <input type = "number" placeholder=" "></input><br>
+            </form>
+        </div>
+            <button class="buttonSize">Submit</button>
+    </div>
 </body>
 </html>
