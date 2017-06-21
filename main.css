@@ -2,7 +2,6 @@
     font-family: 'Apple-Chancery', cursive;
     font-style: italic;
     font-size: 60px;
-    
 }
 
 .whiteFont {
@@ -10,17 +9,14 @@
 }
 .yellow {
     color: yellow;
-
 }
 
 .red {
     color: #C91A44;
-
 }
 
 .Italic {
     font-style: italic;
-
 }
 
 .bordercontainer {
@@ -33,7 +29,6 @@
     padding-right: 5%;
     padding-bottom: 35%;
     padding-top: 2%;
-
 }
 
 .submitbox {
@@ -49,7 +44,6 @@
     padding-right: 23%;
     flex-direction: column;
     justify-content: space-around;
-
 }
 
 .submitform .width {
@@ -90,11 +84,9 @@ nav-bar button {
     background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
-            box-shadow:2px 4px 8px 0 rgba(255, 255, 255, 0.5)
-
+    box-shadow:2px 4px 8px 0 rgba(255, 255, 255, 0.5)
 }
 
 nav-bar button:hover {
-            box-shadow:12px 15px 20px 0 rgba(255, 255, 255, 0.5)
-
+    box-shadow:12px 15px 20px 0 rgba(255, 255, 255, 0.5)
 }
