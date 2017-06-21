@@ -77,6 +77,10 @@ article .footer >a{
 article .news{
     margin-bottom: 10px;
 }
+article #showNews,
+article #hideNews{
+    cursor: pointer;
+}
 article .showHideHeader{
     color: #e91a57;
     margin-bottom: 15px;
