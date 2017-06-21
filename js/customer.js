@@ -9,3 +9,27 @@ setTimeout(hideNews.addEventListener('click', function () {
 setTimeout(showNews.addEventListener('click', function () {
     showPragraph.style.display = 'block';
 }),10000);
+/*================= Form validation =================*/
+window.addEventListener('load', function () {
+    submitForm.addEventListener('click', function (event) {
+        event.preventDefault();
+        const name = document.getElementById('name');
+        if (name.value === "") {
+            name.style.background = '#f00';
+        }else{
+            return true;
+        }
+        const email = document.getElementById('email');
+        if (email.value === "@" && email.value === "." && email.indexOf("@") !== -1 && email.indexOf(".") !== -1) {
+            return true;
+        }else{
+            email.style.background = '#f00';
+        }
+        const phoneNumber = document.getElementById('phoneNumber');
+        if (phoneNumber.value === "" ||  phoneNumber.value.length > 15 || phoneNumber.value.length < 11) {
+            phoneNumber.style.background = '#f00';
+        }else{
+            return true;
+        }
+    });
+},false);
