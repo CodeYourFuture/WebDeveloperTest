@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <title>Web Developer Test</title>
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Kaushan+Script|Satisfy" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
-
-
-
     <link rel="stylesheet" href="main.css">
     <style>
         body {
@@ -18,6 +12,7 @@
         }
     </style>
 </head>
+
 <body class="whiteFont">
     <div class="bordercontainer">
         <header>
@@ -30,14 +25,14 @@
         </nav-bar>
         <section>
             <h2 class="aboutCYF red">About CYF</h2>
-        </section>    
+        </section>
         <article>
             <h3>What We Do</h3>
             <p>
-                <font class="bold">CYF</font> is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet,
-                whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum
-                dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem
-                ipsum dolor sit amet, whatever.
+                <strong class="biggertext">CYF</strong> is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem
+                ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is
+                a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor
+                sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever.
             </p>
             <h4 class="yellow">Our focus</h4>
 
@@ -50,34 +45,40 @@
         </article>
         <article>
             <h3>News</h3>
-            <p class="red shnews">Show/Hide news item</p>
-            <p>CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet,
-                whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum
-                dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a
-            </p>
-            <div class="indentedParagraph">
-                <p>"I wanted to do something new and different. Sprite came to me with the idea. I thought it was cool. Withough fans, there's
-                    no players. Can add so many things here. More topic will be welcome".
+            <span class="red shnews" style="cursor:pointer">&#10097; Show/Hide news item</span>
+            <div id="News">
+                <p>CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum
+                    dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a
+                    fictitious company-lorem ipsum dolor sit amet, whatever. CYF is a fictitious company-lorem ipsum dolor
+                    sit amet, whatever. CYF is a
                 </p>
+                <div class="indentedParagraph">
+                    <p>"I wanted to do something new and different. Sprite came to me with the idea. I thought it was cool.
+                        Withough fans, there's no players. Can add so many things here. More topic will be welcome".
+                    </p>
+                </div>
             </div>
         </article>
-        <section>
-            <h3 class="MInfo">More Information</h3>
+        <section id="moreInfo">
+            <h3 class="MInfo" style="cursor:pointer">More Information</h3>
             <p>For more information about our products and services, please contact us using the form below</p>
             <p>Items marked * are required fields</p>
         </section>
         <div class="submitbox">
             <form class="submitform">
                 <label>Contact name *:</label><br>
-                <input class = "width nameInput" type = "text" placeholder=" "></input><br>
+                <input class="width nameInput" id="example-name-input" type="text" placeholder=""><br>
                 <label>Contact email address *:</label><br>
-                <input class = 'emailInput'type = "email" placeholder=" "></input><br>
+                <input class="emailInput" id="example-email-input" type="email" placeholder=""><br>
                 <label>Contact phone number: </label><br>
-                <input class = 'numberInput'type = "number" placeholder=" "></input><br>
+                <input class="numberInput" id="example-phone-input" type="tel" placeholder=""><br>
             </form>
         </div>
-            <button class="buttonSize submitBtn">Submit</button>
+        <button class="buttonSize submitBtn">Submit</button>
     </div>
+
+    <script src="./main.js"></script>
+
 </body>
 
 </html>
