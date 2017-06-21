@@ -1,0 +1,113 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Code Your Future | CYF</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- Site Header-->
+    <div class="site-header">
+        <h1 class="website-title">CYF</h1>
+        <!-- Navigate bar-->
+        <div class="navbar">
+            <button id="Menu 1" type="button" class="btn btn-primary">Menu 1</button>
+            <button id="Menu 2" type="button" class="btn btn-primary">Menu 2</button>
+            <button id="Menu 3" type="button" class="btn btn-primary">Menu 3</button>
+        </div>
+    </div>
+    <!-- Articles-->
+    <div id="mainArticles" class="articles">
+        <div class="articles-title">
+            About CYF
+        </div>
+        <!--First Article_What we do-->
+        <article class="article first">
+            <div class="article-title ">
+                What We Do
+            </div>
+            <p class="article-body"><b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                sheets containing <b> Lorem Ipsum</b> passages, and more recently with desktop publishing software like Aldus
+                PageMaker including versions of Lorem Ipsum. </p>
+        </article>
+        <!--Second Article_Our focus-->
+        <article class="article second">
+            <div class="article-title ">
+                Our focus
+            </div>
+            <ul class="article-body">
+                <li class="article-body-item ">
+                    Interactive
+                </li>
+                <li class="article-body-item">
+                    Mobile
+                </li>
+                <li class="article-body-item">
+                    Technology
+                </li>
+            </ul>
+            <p class="article-body">
+                <a href="#">
+				<span class="download"></span>
+					Click here to download a pdf for our recent work 
+				</a>
+            </p>
+        </article>
+        <!--Third Article_ News-->
+        <article class="article third">
+            <div class="article-title ">
+                News
+            </div>
+            <ul class="article-body-control">
+                <li><a href="#" id="controlElement">Show/Hide news items</a></li>
+            </ul>
+            <p class="article-body" id="news">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                using 'Content here, content here', making it look like readable English. Many desktop publishing packages
+                and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
+                uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+            </p>
+            <p class="article-body" id="subNews">
+                "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                by injected humour, or randomised words which don't look even slightly believable. If you are going to use
+                a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
+            </p>
+        </article>
+        <!--Fourth Article_ Form-->
+        <article class="article fourth">
+            <div class="article-title ">
+                More information
+            </div>
+            <p class="article-body">
+                For more information about our product and services, Please contact us the form below.
+            </p>
+            <p class="article-body">Items marked * are required fields</p>
+            <form>
+                <div class="form-group">
+                    <label for="text-input-name">Contact name*:</label><br>
+                    <input class="form-control" type="text" value="" id="text-input-name">
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Contact Email address*:</label><br>
+                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="text-input-phone">Contact phone number:</label><br>
+                    <input class="form-control" type="text" value="" id="text-input-phone">
+                </div><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </article>
+    </div>
+    <script src="./JS/main.js"></script>
+
+</body>
+
+</html>

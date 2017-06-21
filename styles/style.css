@@ -1,0 +1,79 @@
+
+/* body style */
+body{
+    margin: 3%;
+    background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+/* header style */
+h1{
+    font-family: sans-serif;
+    font-size: 6em;
+    color: white;
+}
+/* navigate bar style */
+.navbar button{
+    display:block;
+    float:left;
+    background:-webkit-linear-gradient(white 5%, gray 10%, #141414 80%, black 10%);
+    background-color:black;
+    color: white;
+    width: 150px;
+    height: 30px;
+    margin: 1px;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+    border-left-width: 1px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/* Articles style */
+article {
+    width:75%;
+}
+.articles .articles-title{
+    clear: left; 
+    font-family: sans-serif;
+    font-size:3em;
+    color:#E51955;
+    margin-bottom: 20px;
+}
+.article .article-title{
+    color: white;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+article.second .article-title{
+    color: yellow;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+article .article-body{
+    font-family: sans-serif;
+    color: white;
+    font-size: 1em;
+}
+article.second a{
+    color: yellow;
+    font-style: italic;
+    text-decoration: none;
+}
+article.third p:last-of-type{
+    padding-left: 7em;
+}
+article.third .article-body-control{
+    color:#E51955;
+    font-size:1.5em;
+}
+article.third ul{
+    list-style-image: url('../assets/arrow.png');
+}
+/* Form style */
+form{
+    color: white;
+}
+#InputEmail , #text-input-phone{
+    width: 300px;
+}
