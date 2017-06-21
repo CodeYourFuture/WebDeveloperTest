@@ -17,10 +17,12 @@ window.addEventListener('load', function () {
         if (name.value === "") {
             name.style.background = '#f00';
         }else{
+            alert('Thank you for register with us');
             return true;
         }
         const email = document.getElementById('email');
         if (email.value === "@" && email.value === "." && email.indexOf("@") !== -1 && email.indexOf(".") !== -1) {
+            alert('Thank you for register with us');
             return true;
         }else{
             email.style.background = '#f00';
@@ -29,6 +31,7 @@ window.addEventListener('load', function () {
         if (phoneNumber.value === "" ||  phoneNumber.value.length > 15 || phoneNumber.value.length < 11) {
             phoneNumber.style.background = '#f00';
         }else{
+            alert('Thank you for register with us');
             return true;
         }
     });
