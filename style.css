@@ -1,22 +1,31 @@
+body{
+    background-image: url("assets/background.png");
+    background-size: 100% 100%;
+    color: white;
+}
+
+.pink {
+    color: #9A0F0A;
+}
+
+.yellow {
+    color:yellow;
+}
+
 .primary-column {
     background-color: black;
     color: white;
-    width: 10%;
+    width: 15%;
 }
 
-.secondary-column {
-    background-color: black;
-    color: white;
-    width: 10%;
+.menu-border {
+    border-style: solid;
+    border-right:white;
+    border-bottom:white;
 }
 
-.third-column {
-    background-color: black;
-    color: white;
-    width: 10%;
-}
 .primary-content{
     display: flex;
     flex-direction: row;
-
+   
 }
