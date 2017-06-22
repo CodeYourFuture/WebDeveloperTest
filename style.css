@@ -1,0 +1,22 @@
+.primary-column {
+    background-color: black;
+    color: white;
+    width: 10%;
+}
+
+.secondary-column {
+    background-color: black;
+    color: white;
+    width: 10%;
+}
+
+.third-column {
+    background-color: black;
+    color: white;
+    width: 10%;
+}
+.primary-content{
+    display: flex;
+    flex-direction: row;
+
+}
