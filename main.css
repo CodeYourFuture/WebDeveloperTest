@@ -43,7 +43,9 @@ h2 {
     color: #CB3541;
     font-weight: 100;
 }
-
+#news{
+ font-weight: 100;  
+}
 h3 {
     font-weight: 100;
 }
@@ -53,7 +55,7 @@ span {
     content: "\203A";
 }
 
-.ourYellow {
+.focus {
     color: yellow;
 }
 a{
@@ -72,12 +74,6 @@ a{
     border: none;
     color: black;
 }
-
-.quot {
-    width: 80%;
-    padding-left: 10%;
-}
-
 .form-control {
     border: 2px solid grey;
     padding: 5px 35px;
