@@ -23,8 +23,6 @@ function checkName(evt) {
     }
 }
 
-var submitBtn = document.querySelector('#submitBtn'); // Element that is going to call the action
-console.log(submitBtn);
 submitBtn.addEventListener("click", checkEmail);
 
 function checkEmail(evt) {
@@ -55,8 +53,6 @@ function checkMobileNumber (evt){
     if (phoneArea.value=""){}
 }
 */
-var submitBtn = document.querySelector('#submitBtn'); // Element that is going to call the action
-console.log(submitBtn);
 submitBtn.addEventListener("click", checkMobileNumber);
 
 function checkMobileNumber(number) {
@@ -70,7 +66,7 @@ function checkMobileNumber(number) {
         if (isNaN(phoneArea.value[i]) && parseInt(Number(phoneArea.value[i])) != phoneArea.value[i] &&
             isNaN(parseInt(phoneArea.value[i], 10))) {
             alert('Please provide a valid phone number');
-            phoneNumber.focus;
+            phoneNumber.focus();
             return false;
         }
     }

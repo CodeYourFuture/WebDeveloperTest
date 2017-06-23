@@ -42,6 +42,10 @@ img {
      color: white;
   }
 
+#cyf{
+    font-weight: bold;
+    font-size: 16pt;
+}
 button.nav-item.active.btn{
   flex: 1;
 }
