@@ -60,15 +60,16 @@ article.second a{
     font-style: italic;
     text-decoration: none;
 }
-article.third p:last-of-type{
-    padding-left: 7em;
-}
+
 article.third .article-body-control{
     color:#E51955;
     font-size:1.5em;
 }
 article.third ul{
     list-style-image: url('../assets/arrow.png');
+}
+#news .title{
+    text-decoration: underline;
 }
 /* Form style */
 form{

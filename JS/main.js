@@ -3,23 +3,47 @@
 var controlElement = document.querySelector('#controlElement');
 controlElement.addEventListener('click', showHide);
 var news = document.querySelector('#news');
-var subNews = document.querySelector('#subNews');
+
+//receive news section from AJAX
+var request = new XMLHttpRequest();         //creating a request object
+request.onreadystatechange = function () {
+    if (request.readyState === 4) {  // check if a response was sent back
+        if (request.status === 200) {     // check if request was successful
+            var array = JSON.parse(request.responseText);
+            for (var i = 0; i < array.length; i++) {
+                var titlePara = document.createElement("p");
+                titlePara.innerText = array[i].title;
+                titlePara.className += ' title';
+                var summarypara = document.createElement("p");
+                summarypara.innerText += array[i].summary;
+                summarypara.className += ' summary';
+                news.appendChild(titlePara);
+                news.appendChild(summarypara);
+            }
+        } else {
+            alert('An error occurred during your request: ' + request.status + ' ' + request.statusText);
+        }
+    }
+}
+var url = "https://private-e99507-kabaros.apiary-mock.com/news";    //server location
+request.open("GET", url);                    // adding it to the request
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); //header info
+request.send();
+
 // Show/Hide Function
 function showHide(event) {
     event.preventDefault();
     if (news.style.display === "") {
         news.style.display = "none";
-        subNews.style.display = "none";
     }
     else if (news.style.display === "none") {
         news.style.display = "block";
-        subNews.style.display = "block";
     }
     else {
         news.style.display = "none";
-        subNews.style.display = "none";
     }
 }
+
 // Form Validation
 //input Text
 var textEmail = document.querySelector('#InputEmail');
@@ -74,3 +98,4 @@ function checkNumber() {
         return false;
     }
 }
+
