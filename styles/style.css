@@ -50,15 +50,10 @@ button.nav-item.active.btn{
   flex: 1;
 }
 
-button.nav-item-1.btn{
+button.nav-item {
   flex: 1;
 }
-button.nav-item-2.btn{
-  flex: 1;
-}
-button.nav-item-3.btn{
-  flex: 1;
-}
+
 .btn:hover  {
   background: lightgray;
   color: gray;
@@ -94,7 +89,7 @@ h4 {
     font-size: 15pt;
 }
 
-#button {
+#buttonNews {
     color: #9b3636;
     font-style: italic;
     font-size: 16px;

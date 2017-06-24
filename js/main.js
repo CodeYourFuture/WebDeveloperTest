@@ -1,16 +1,14 @@
-var button = document.getElementById('button');
-
+var button = document.getElementById('buttonNews');
 button.onclick = function displayAndHide() {
-    var x = document.getElementById('displayInfo');
-    if (x.style.display === "") {
-        x.style.display = 'none';
+    var hide = document.getElementById('displayInfo');
+    if (hide.style.display === "") {
+        hide.style.display = 'none';
     } else {
-        x.style.display = '';
+        hide.style.display = '';
     }
 }
 
-var submitBtn = document.querySelector('#submitBtn'); // Element that is going to call the action
-console.log(submitBtn);
+var submitBtn = document.querySelector('#submitBtn');
 submitBtn.addEventListener("click", checkName);
 
 function checkName(evt) {
@@ -41,20 +39,7 @@ function checkEmail(evt) {
     }
 }
 
-
-
-/*var submitBtn = document.querySelector('#submitBtn'); // Element that is going to call the action
-console.log(submitBtn);
-submitBtn.addEventListener("click", checkForm);
-
-function checkMobileNumber (evt){
-    evt.preventDefault();
-    var phoneArea = document.querySelector("#phoneArea");
-    if (phoneArea.value=""){}
-}
-*/
 submitBtn.addEventListener("click", checkMobileNumber);
-
 function checkMobileNumber(number) {
     number.preventDefault();
     var phoneArea = document.querySelector("#phoneArea");
@@ -72,4 +57,22 @@ function checkMobileNumber(number) {
     }
 }
 
+/*var addNews = document.querySelector("#buttonNews"); // Element that is going to call the action
+addNews.addEventListener("click", request);*/
 
+  var request = new XMLHttpRequest();         //creating a request object
+
+  request.onreadystatechange = function() {
+    if(request.readyState === 4) {  // check if a response was sent back
+      if(request.status === 200) {     // check if request was successful
+        displayInfo.innerHTML = request.responseText;
+      } else {
+        displayInfo.innerHTML = 'An error occurred during your request: ' +  request.status + ' ' + request.statusText;
+      }
+    }
+  }
+  var url = "https://private-e99507-kabaros.apiary-mock.com/news";                                        //server location
+  request.open("GET", url);                    // adding it to the request
+
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); //header info
+request.send();                                 // sending the request
