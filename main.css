@@ -4,6 +4,11 @@
     font-size: 60px;
 }
 
+ body {
+    background-image: url("background.png");
+    background-size: cover;
+}
+
 .whiteFont {
     color: white;
 }
