@@ -1,6 +1,11 @@
-var main = document.querySelector('#main');
-main.addEventListener('click', showHideNews);
-var hide = document.querySelector('.hideitem');
-function showHideNews(){
-showHide
+var hideShow = document.querySelector('#hideitem');
+hideShow.addEventListener('click', showHideNews);
+var news = document.querySelector('#news');
+function showHideNews(event) {
+    event.preventDefault();
+    if (news.style.display === '') {
+        news.style.display = 'none';
+    } else {
+        news.style.display = '';
+    }
 }
