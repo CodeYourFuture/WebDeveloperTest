@@ -14,14 +14,11 @@ function ShowHide(element) {
    }
 }
 
-
 var MInfoButton = document.querySelector('.MInfo');
 MInfoButton.addEventListener('click', MoreInFo);
 
 function MoreInFo() {
    ShowHide(document.querySelector('#moreInfo p'));
-
-
 }
 
 var submitButton = document.querySelector('.submitBtn');
@@ -43,30 +40,17 @@ function submitForm(event) {
         nameInput.className = 'nameInput inValid';
         SubmitFormIsValid = false;
     } 
-    // else {
-    //     nameInput.className = 'nameInput';
-    //     nameInput.value = "";
-        
-    // }
 
     if (emailInputWV.length === 0 || emailInputWV.indexOf('@') === -1) {
         emailInput.className = 'emailInput inValid';
         SubmitFormIsValid = false;
     } 
-    // else {
-    //     emailInput.className = 'emailInput';
-    //     emailInput.value = "";
-    // }
+    
     if (numberInputWV.length > 11) {
         numberInput.className = 'numberInput inValid';
         SubmitFormIsValid = false;
     } 
-    // else { 
-    //     numberInput.className = 'numberInput';
-    //     numberInput.value = "";
-        
-    // }
-
+    
     if (SubmitFormIsValid) {
         alert('Thanks for filling the form');
         numberInput.className = 'numberInput';
@@ -78,6 +62,4 @@ function submitForm(event) {
         nameInput.className = 'nameInput';
         nameInput.value = "";
     }
-    
-
 }
