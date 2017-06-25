@@ -1,14 +1,3 @@
-/*================= Show & Hide News =================*/
-const hideNews = document.querySelector('#hideNews');
-const showNews = document.querySelector('#showNews');
-const hidePragraph = document.querySelector('.hideNews');
-const showPragraph = document.querySelector('.showNews');
-setTimeout(hideNews.addEventListener('click', function () {
-    hidePragraph.style.display = 'none';
-}),10000);
-setTimeout(showNews.addEventListener('click', function () {
-    showPragraph.style.display = 'block';
-}),10000);
 /*================= Form validation =================*/
 window.addEventListener('load', function () {
     submitForm.addEventListener('click', function (event) {
@@ -19,91 +8,137 @@ window.addEventListener('load', function () {
 
         if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
             alert('Thank you for register with us');
-        }else if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
+        } else if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
             if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
                 phoneNumber.style.background = '#f00';
-            }else if (name.value !== "" || email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
+            } else if (name.value !== "" || email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
                 if (name.value !== "") {
                     email.style.background = '#f00';
                     phoneNumber.style.background = '#f00';
-                }else if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)){
+                } else if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
                     name.style.background = '#f00';
                     phoneNumber.style.background = '#f00';
-                }else{
+                } else {
                     alert('error');
                 }
             }
-        }else if (name.value !== "" && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
+        } else if (name.value !== "" && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
             if (name.value !== "" && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
                 email.style.background = '#f00';
-            }else if (name.value !== "" || phoneNumber.value !== "" && phoneNumber.value.length < 12) {
+            } else if (name.value !== "" || phoneNumber.value !== "" && phoneNumber.value.length < 12) {
                 if (name.value !== "") {
                     email.style.background = '#f00';
                     phoneNumber.style.background = '#f00';
-                }else if (phoneNumber.value !== "" && phoneNumber.value.length < 12){
+                } else if (phoneNumber.value !== "" && phoneNumber.value.length < 12) {
                     name.style.background = '#f00';
                     email.style.background = '#f00';
-                }else{
+                } else {
                     alert('error');
                 }
             }
-        }else if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) && phoneNumber.value !== "" && phoneNumber.value.length < 12){
+        } else if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
             if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
                 name.style.background = '#f00';
-            }else if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) || phoneNumber.value !== "" && phoneNumber.value.length < 12) {
+            } else if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) || phoneNumber.value !== "" && phoneNumber.value.length < 12) {
                 if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
                     name.style.background = '#f00';
                     phoneNumber.style.background = '#f00';
-                }else if (phoneNumber.value !== "" && phoneNumber.value.length < 12){
+                } else if (phoneNumber.value !== "" && phoneNumber.value.length < 12) {
                     name.style.background = '#f00';
                     email.style.background = '#f00';
-                }else{
+                } else {
                     alert('error');
                 }
             }
-        }else if(name.value === "" && email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) && phoneNumber.value === "" || phoneNumber.value.length > 11) {
+        } else if (name.value === "" && email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) && phoneNumber.value === "" || phoneNumber.value.length > 11) {
             name.style.background = '#f00';
             email.style.background = '#f00';
             phoneNumber.style.background = '#f00';
-        }else if (name.value === "" && email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
+        } else if (name.value === "" && email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
             if (name.value === "" && email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
                 name.style.background = '#f00';
                 email.style.background = '#f00';
-            }else if (name.value === "" || email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
+            } else if (name.value === "" || email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
                 if (name.value === "") {
                     name.style.background = '#f00';
-                }else if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)){
+                } else if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
                     email.style.background = '#f00';
-                }else{
+                } else {
                     alert('error');
                 }
             }
-        }else if (name.value === "" && phoneNumber.value === "" || phoneNumber.value.length > 11) {
+        } else if (name.value === "" && phoneNumber.value === "" || phoneNumber.value.length > 11) {
             if (name.value === "" && phoneNumber.value === "" || phoneNumber.value.length > 11) {
                 name.style.background = '#f00';
                 phoneNumber.style.background = '#f00';
-            }else if (name.value === "" && phoneNumber.value === "" || phoneNumber.value.length > 11) {
+            } else if (name.value === "" && phoneNumber.value === "" || phoneNumber.value.length > 11) {
                 if (name.value === "") {
                     name.style.background = '#f00';
-                }else if (phoneNumber.value === "" || phoneNumber.value.length > 11){
+                } else if (phoneNumber.value === "" || phoneNumber.value.length > 11) {
                     phoneNumber.style.background = '#f00';
-                }else{
+                } else {
                     alert('error');
                 }
             }
-        }else if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) && phoneNumber.value === "" || phoneNumber.value.length > 11){
+        } else if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) && phoneNumber.value === "" || phoneNumber.value.length > 11) {
             if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) && phoneNumber.value === "" || phoneNumber.value.length > 11) {
                 email.style.background = '#f00';
                 phoneNumber.style.background = '#f00';
-            }else if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) || phoneNumber.value === "" || phoneNumber.value.length > 11) {
+            } else if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) || phoneNumber.value === "" || phoneNumber.value.length > 11) {
                 if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
                     nemailame.style.background = '#f00';
-                }else if (phoneNumber.value === "" || phoneNumber.value.length){
+                } else if (phoneNumber.value === "" || phoneNumber.value.length) {
                     phoneNumber.style.background = '#f00';
-                }else{
+                } else {
                     alert('error');
                 }
             }
-        }          
+        }
     });
-},false);
+}, false);
+/*==================== Start AJAX Post Data===================*/
+var request = new XMLHttpRequest();
+const myPragraph = document.querySelector('#newsPragraph');
+request.onreadystatechange = function () {
+    if (request.readyState === 4) {  // check if a response was sent back
+        if (request.status === 200) { 	// check if request was successful
+            myPragraph.innerHTML = request.responseText;
+        } else {
+            myPragraph.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
+        }
+    }
+}
+var url = "http://ajax-cyf.eu-west-1.elasticbeanstalk.com/chatroom/?id=dwina";	                                        //server location
+var params = " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by\
+injected humour, or randomised words which don\'t look even slightly believable. If you are going to use\
+a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle\
+of text.All the Lorem Ipsum generators on the Internet\.";
+request.open("POST", url, true);
+
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+request.send(params);
+/*==================== Start AJAX Get Data===================*/
+var request = new XMLHttpRequest();
+const showNews = document.querySelector('#showNews');
+showNews.addEventListener('click', function (event) {
+    event.preventDefault();
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+                const data = JSON.parse(request.responseText);
+                myPragraph.innerHTML = data.message;
+            } else {
+                myPragraph.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
+            }
+        }
+    }
+    var url = "http://ajax-cyf.eu-west-1.elasticbeanstalk.com/chatroom/?id=dwina";	                                    //server location
+    request.open("GET", url);
+
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.send();
+});
+const hideNews = document.querySelector('#hideNews');
+hideNews.addEventListener('click', function () {
+    myPragraph.style.display = "none";
+})
