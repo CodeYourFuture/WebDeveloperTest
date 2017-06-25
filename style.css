@@ -1,0 +1,158 @@
+body{
+    margin: 3%;
+    background-image: url("assets/background.png");
+    background-repeat: no-repeat;
+    background-size:cover;    
+}
+.website-title{
+    color:white;
+    font-size: 57px;
+}
+
+ul {
+ list-style-type: none; 
+    margin: 0;
+    padding: 0;
+ }
+
+ nav .links li{
+    display: inline-block;
+}
+ul.links a{
+    color:white;
+    text-decoration: none;
+    display:inline-block;
+    text-align: center;
+    background:-webkit-linear-gradient(white 5%, gray 10%, #141414 80%, black 10%);
+    background-color:black;
+    color: white;
+    width: 150px;
+    height: 30px;
+    margin: 1px;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+    border-left-width: 1px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* header style */
+
+.articles .title{
+   clear: left; 
+    font-family: sans-serif;
+    font-size:3em;
+    color:#E51955;
+    margin-bottom: 20px;
+}
+
+.news .title{
+       clear: left; 
+    font-family: sans-serif;
+    font-size:3em;
+    color:grey;
+    margin-bottom: 20px;
+}
+
+.Information .title{
+           clear: left; 
+    font-family: sans-serif;
+    font-size:3em;
+    color:grey;
+    margin-bottom: 20px;
+}
+
+.article1 .article-title{
+  color: white;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+
+.article2 .article-title{
+     color: yellow;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+
+.article1-body{
+     font-family: sans-serif;
+    color: white;
+    font-size: 1em;
+}
+
+.article-body-item{
+       color: white;
+    font-size: 26px;
+}
+
+.dropdown-menu{
+    color:#E51955;
+    font-size:1.5em;
+}
+
+.new .title{
+        color: white;
+    font-size: 26px;
+}
+
+.information .title{
+          color: white;
+    font-size: 26px;
+}
+
+.body{
+         color: white;
+    font-size: 16px;
+}
+.form-body{
+         color: white;
+    font-size: 16px;}
+/* Articles style */
+div#main.articles  {
+    display: block;
+    width:75%;
+}
+
+
+a#drop{
+  
+     color:#E51955;
+    font-size:1em;
+    background-image: url('assets/arrodw.png');
+  background-position: left no-repeat;
+
+   
+}
+
+a#drop:before {
+    display: inline-block;
+    
+content: url('assets/arrow.png');
+
+}
+
+
+#drop1{
+    color:white;
+    font-size: 18px;
+     font-family: sans-serif;
+}
+
+#drop2{
+    color:white;
+    font-size: 18px;
+     font-family: sans-serif;
+     margin-left: 120px;
+}
+/* Form style */
+form{
+    color: white;
+}
+#useremail , #userphone{
+    width: 300px;
+}
