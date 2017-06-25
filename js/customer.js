@@ -108,11 +108,8 @@ request.onreadystatechange = function () {
         }
     }
 }
-var url = "http://ajax-cyf.eu-west-1.elasticbeanstalk.com/chatroom/?id=dwina";	                                        //server location
-var params = " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by\
-injected humour, or randomised words which don\'t look even slightly believable. If you are going to use\
-a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle\
-of text.All the Lorem Ipsum generators on the Internet\.";
+var url = " https://private-e99507-kabaros.apiary-mock.com/news";	                                        //server location
+var params = "There are many variations of passages of Lorem Ipsum available.";
 request.open("POST", url, true);
 
 request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -132,7 +129,7 @@ showNews.addEventListener('click', function (event) {
             }
         }
     }
-    var url = "http://ajax-cyf.eu-west-1.elasticbeanstalk.com/chatroom/?id=dwina";	                                    //server location
+    var url = " https://private-e99507-kabaros.apiary-mock.com/news";	                                    //server location
     request.open("GET", url);
 
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
