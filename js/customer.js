@@ -96,46 +96,39 @@ window.addEventListener('load', function () {
         }
     });
 }, false);
-/*==================== Start AJAX Post Data===================*/
-var request = new XMLHttpRequest();
-const myPragraph = document.querySelector('#newsPragraph');
-request.onreadystatechange = function () {
-    if (request.readyState === 4) {  // check if a response was sent back
-        if (request.status === 200) { 	// check if request was successful
-            myPragraph.innerHTML = request.responseText;
-        } else {
-            myPragraph.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
-        }
-    }
-}
-var url = " https://private-e99507-kabaros.apiary-mock.com/news";	                                        //server location
-var params = "There are many variations of passages of Lorem Ipsum available.";
-request.open("POST", url, true);
-
-request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-request.send(params);
 /*==================== Start AJAX Get Data===================*/
-var request = new XMLHttpRequest();
+
 const showNews = document.querySelector('#showNews');
+const newsPragraph = document.querySelector('#newsPragraph');
+const newsTitle = document.querySelector('#newsTitle');
+const url = "https://private-e99507-kabaros.apiary-mock.com/news";
+var request = new XMLHttpRequest();
+
 showNews.addEventListener('click', function (event) {
     event.preventDefault();
     request.onreadystatechange = function () {
+        const result = "";
         if (request.readyState === 4) {
             if (request.status === 200) {
                 const data = JSON.parse(request.responseText);
-                myPragraph.innerHTML = data.message;
+                for (var i in data) {
+                    newsTitle.innerHTML = data[i].title;
+                    newsPragraph.innerHTML = data[i].summary
+                    result += newsTitle.innerHTML + newsPragraph.innerHTML; 
+                }
             } else {
-                myPragraph.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
+                newsPragraph.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
             }
         }
-    }
-    var url = " https://private-e99507-kabaros.apiary-mock.com/news";	                                    //server location
+        return result;
+    }	                                    
     request.open("GET", url);
-
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     request.send();
 });
 const hideNews = document.querySelector('#hideNews');
 hideNews.addEventListener('click', function () {
-    myPragraph.style.display = "none";
+    newsPragraph.style.display = "none";
+    newsTitle.style.display = "none";
 })
+
