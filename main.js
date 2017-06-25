@@ -1,14 +1,14 @@
 
 var News = document.getElementById('News');   
 var url = "https://private-e99507-kabaros.apiary-mock.com/news";                                     //server location
-var ourRequest = new XMLHttpRequest();
-ourRequest.open('GET',url)
+var request = new XMLHttpRequest();
+request.open('GET',url)
 
-ourRequest.onload = function() {
-var newData = JSON.parse(ourRequest.responseText);
+request.onload = function() {
+var newData = JSON.parse(request.responseText);
 renderHTML(newData);
 }
-ourRequest.send();
+request.send();
 
 
 function renderHTML(data){
