@@ -13,10 +13,10 @@ request.onreadystatechange = function () {
             for (var i = 0; i < array.length; i++) {
                 var titlePara = document.createElement("p");
                 titlePara.innerText = array[i].title;
-                titlePara.className += ' title';
+                titlePara.className += 'title';
                 var summarypara = document.createElement("p");
-                summarypara.innerText += array[i].summary;
-                summarypara.className += ' summary';
+                summarypara.innerText = array[i].summary;
+                summarypara.className += 'summary';
                 news.appendChild(titlePara);
                 news.appendChild(summarypara);
             }
