@@ -57,22 +57,35 @@ function checkMobileNumber(number) {
     }
 }
 
-/*var addNews = document.querySelector("#buttonNews"); // Element that is going to call the action
-addNews.addEventListener("click", request);*/
 
-  var request = new XMLHttpRequest();         //creating a request object
+var addNews = document.querySelector("#buttonNews"); // Element that is going to call the action
+addNews.addEventListener("click", request);
 
-  request.onreadystatechange = function() {
-    if(request.readyState === 4) {  // check if a response was sent back
-      if(request.status === 200) {     // check if request was successful
-        displayInfo.innerHTML = request.responseText;
-      } else {
-        displayInfo.innerHTML = 'An error occurred during your request: ' +  request.status + ' ' + request.statusText;
-      }
+var request = new XMLHttpRequest();         //creating a request object
+var url = "https://private-e99507-kabaros.apiary-mock.com/news";                                        //server location
+var displayInfo = document.getElementById("displayInfo");
+
+request.onreadystatechange = function () {
+    var data = JSON.parse(request.responseText); // goes inside the array of object and breaks it into arrays
+    if (request.readyState === 4) {  // check if a response was sent back
+        if (request.status === 200) {     // check if request was successful
+            renderHTML(data).innerHTML = request.responseText;
+        } else {
+            renderHTML(data).innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
+        }
     }
-  }
-  var url = "https://private-e99507-kabaros.apiary-mock.com/news";                                        //server location
-  request.open("GET", url);                    // adding it to the request
+};
 
+request.open("GET", url);                    // adding it to the request
 request.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); //header info
 request.send();                                 // sending the request
+
+// Styles the news feed
+function renderHTML(data) {
+    var htmlString = "";
+    for (i = 0; i < data.length; i++) {
+        htmlString += "<h5>" + data[i].title + "</h5>" + "<p>" + data[i].summary + "</p>";
+    }
+    displayInfo.insertAdjacentHTML("beforeend", htmlString);
+
+}
