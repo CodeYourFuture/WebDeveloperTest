@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<head>
+    <title>C*Y*F</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <img class="img-fluid navbar-brand" src="styles/images/logo_cyf.jpg" alt="logo for code your future">
+            <div class="container-navbar">
+                <ul class="navbar-all-items">
+                    <button class="nav-item active btn">
+							<a class="nav-link" href="index.html">Home</a>
+						</button>
+                    <button class="nav-item btn">
+							<a class="nav-link" href="#">Button1</a>
+						</button>
+                    <button class="nav-item btn">
+							<a class="nav-link" href="#">Button2</a>
+						</button>
+                    <button class="nav-item btn">
+							<a class="nav-link" href="#">Button3</a>
+						</button>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="row">
+            <div class="primary-content col-lg-8">
+                <section class="about">
+                    <h1> About C*Y*F </h1>
+                    <h3> What do we do?</h3>
+                    <p><span id="cyf"> CYF </span> is a fictious company.Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Morbi sed maximus velit. Nunc sed consequat libero. Donec quis condimentum sem. Aenean aliquam
+                        molestie nunc aliquam elementum. Curabitur nec cursus ex, et tempor felis. Sed nunc ex, porta volutpat
+                        ullamcorper sit amet, malesuada in dui. Nullam eu euismod nulla. Nunc ac lobortis turpis. Maecenas
+                        quis facilisis urna, eget rutrum justo.</p>
+                    <h4> Our Focus </h4>
+                    <ul class="bullet-points">
+                        <li> Interactive </li>
+                        <li> Mobile </li>
+                        <li> Technology </li>
+                    </ul>
+                    <a href="http://www.fakelik.com/pdf.pdf"> Click here to download a PDF of our recent work </a>
+                </section>
+                <section class="news">
+                    <h1> Latest News </h1>
+                    <button id="buttonNews"> Show / Hide news item </button>
+                    <div id="displayInfo">  </div>
+                      </section>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed maximus velit. Nunc sed consequat
+                            libero. Donec quis condimentum sem. Aenean aliquam molestie nunc aliquam elementum. Curabitur
+                            nec cursus ex, et tempor felis. Sed nunc ex, porta volutpat ullamcorper sit amet, malesuada in
+                            dui. Nullam eu euismod nulla. Nunc ac lobortis turpis. Maecenas quis facilisis urna, eget rutrum
+                            justo.
+                        </p>
+                        <blockquote> "I wanted to do something new and different. Sprite came to me with the idea. I thought it was cool.
+                            Without the fans, there's no players'" </blockquote>
+                  
+              
+                <br>
+                <section class="more-info">
+                    For more information about our products an services,<br> plase contact us using the form below. Note:
+                    <h6> Items marked * are required fields.</h6>
+
+                    <div class="form">
+                        <form>
+                            <div class="form-group">
+                                <label for="nameArea"> Contact Name </label>
+                                <input class="form-control" id="nameArea" aria-describedby="nameHelp" placeholder="Enter Name" />
+                                <small id="nameHelp" class="form-text text-muted"> * required</small>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="email"> Email address  </label>
+                                <input type="email" class="form-control" id="emailArea" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted"> * required </small>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="phoneArea"> Contact phone number  </label>
+                                <input class="form-control" id="phoneArea" aria-describedby="phoneHelp" placeholder="Enter phone number" />
+                                <small id="phoneHelp" class="form-text text-muted"> * required </small>
+                            </div>
+                            <br>
+                            <button type="submit" id="submitBtn" class="btn"> Submit </button>
+
+
+                        </form>
+                    </div>
+
+
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
