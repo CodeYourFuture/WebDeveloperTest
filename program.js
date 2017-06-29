@@ -26,5 +26,38 @@ function changesome() {
         alert("please enter a valid Phone number");
         return
     }
-alert("Thank you for completing your information.");
+    alert("Thank you for completing your information.");
 }
+
+
+ 
+
+
+var request = new XMLHttpRequest(); 		//creating a request object
+
+
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {  // check if a response was sent back
+            var box = document.querySelector('#anser');
+            if (request.status === 200) { 	// check if request was successful
+               var news = JSON.parse(request.responseText);
+                var output = '';
+                for(i =0; i < news.length; i++ ){
+                    output += '<h3>' + news[i].title + '</h3>';
+                    output += '<p>' + news[i].summary + '</p>';
+                }
+                box.innerHTML = output;
+            } else {
+                box.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
+            }
+        }
+    }
+    var url = "https://private-e99507-kabaros.apiary-mock.com/news";	   
+                                    //server location
+    // content we want to send
+    request.open("Get", url, true);			// adding them to the request
+
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); //header info
+    request.send();
+
+
