@@ -97,7 +97,8 @@ window.addEventListener('load', function () {
     });
 }, false);
 /*==================== Start AJAX Get Data===================*/
-const resivedNews = document.getElementById('resivedNews');
+window.addEventListener('load', function () {
+    const resivedNews = document.getElementById('resivedNews');
 resivedNews.style.display = 'none';
 const showNews = document.querySelector('#showNews');
 const url = "https://private-e99507-kabaros.apiary-mock.com/news";
@@ -113,8 +114,7 @@ var request = new XMLHttpRequest();
                     resivedNews.style.display = 'block';
                 } else {
                     resivedNews.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
-                }
-            
+                }          
         }
         request.open("GET", url);
         request.send();
@@ -123,7 +123,8 @@ var request = new XMLHttpRequest();
     const hideNews = document.querySelector('#hideNews');
     hideNews.addEventListener('click', function () {
         resivedNews.style.display = 'none';
-    })
+    });
+});
 
 
 
