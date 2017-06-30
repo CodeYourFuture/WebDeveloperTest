@@ -97,38 +97,33 @@ window.addEventListener('load', function () {
     });
 }, false);
 /*==================== Start AJAX Get Data===================*/
-
+const resivedNews = document.getElementById('resivedNews');
+resivedNews.style.display = 'none';
 const showNews = document.querySelector('#showNews');
-const newsPragraph = document.querySelector('#newsPragraph');
-const newsTitle = document.querySelector('#newsTitle');
 const url = "https://private-e99507-kabaros.apiary-mock.com/news";
 var request = new XMLHttpRequest();
-
-showNews.addEventListener('click', function (event) {
-    event.preventDefault();
-    request.onreadystatechange = function () {
-        const result = "";
-        if (request.readyState === 4) {
-            if (request.status === 200) {
-                const data = JSON.parse(request.responseText);
-                for (var i in data) {
-                    newsTitle.innerHTML = data[i].title;
-                    newsPragraph.innerHTML = data[i].summary
-                    result += newsTitle.innerHTML + newsPragraph.innerHTML; 
+    showNews.addEventListener('click', function (event) {
+        event.preventDefault();
+        request.onreadystatechange = function () {
+            if (request.readyState === 4 && request.status === 200) {
+                    const data = JSON.parse(request.responseText);
+                    for (i = 0; i < data.length; i++) {                       
+                        resivedNews.innerHTML += "<h2>"+data[i].title+"</h2>"+"<br>"+ "<p>"+data[i].summary+".</p><br>";
+                    }
+                    resivedNews.style.display = 'block';
+                } else {
+                    resivedNews.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
                 }
-            } else {
-                newsPragraph.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
-            }
+            
         }
-        return result;
-    }	                                    
-    request.open("GET", url);
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.send();
-});
-const hideNews = document.querySelector('#hideNews');
-hideNews.addEventListener('click', function () {
-    newsPragraph.style.display = "none";
-    newsTitle.style.display = "none";
-})
+        request.open("GET", url);
+        request.send();
+    });
+
+    const hideNews = document.querySelector('#hideNews');
+    hideNews.addEventListener('click', function () {
+        resivedNews.style.display = 'none';
+    })
+
+
 
