@@ -42,3 +42,23 @@ function validatFormFild() {
     }
 
 }
+
+var xmlRequest = new XMLHttpRequest();
+xmlRequest.onreadystatechange = function(){
+    if (xmlRequest.readystate === 4){
+        if(xmlRequest.status === 200){
+            var data = JSON.parse(xmlRequest.responseText);
+            var textBox = document.querySelector('#newsInfo');
+            textBox.innerHTML = data[0].title + data[0].summary;
+            console.log(data[0].title);
+            console.log(data[0].summary);
+        }else{
+            alert('there is an error');
+        }
+    }
+}
+xmlRequest.open('Get', 'https://private-e99507-kabaros.apiary-mock.com/news');
+xmlRequest.send();
+
+console.log(xmlRequest.status);
+console.log(xmlRequest.statusText);
