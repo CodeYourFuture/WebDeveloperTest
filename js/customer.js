@@ -6,8 +6,18 @@ window.addEventListener('load', function () {
         const email = document.getElementById('email');
         const phoneNumber = document.getElementById('phoneNumber');
 
+
+        // is the name field ok?
+        //    if no -> change it to red AND set nameValid = true
+        //    if yes - > remove the red colour AND set nameValid = false
+        // same for email
+        // same for phone number
+        // 
+
+        // If the name, email and contact number valid excute this code
         if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
             alert('Thank you for register with us');
+        // If the name & email excute but contact number not this code
         } else if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
             if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
                 phoneNumber.style.background = '#f00';
@@ -106,15 +116,18 @@ var request = new XMLHttpRequest();
     showNews.addEventListener('click', function (event) {
         event.preventDefault();
         request.onreadystatechange = function () {
-            if (request.readyState === 4 && request.status === 200) {
+            if (request.readyState === 4 ){
+                if (request.status === 200) {
                     const data = JSON.parse(request.responseText);
                     for (i = 0; i < data.length; i++) {                       
                         resivedNews.innerHTML += "<h2>"+data[i].title+"</h2>"+"<br>"+ "<p>"+data[i].summary+".</p><br>";
                     }
                     resivedNews.style.display = 'block';
-                } else {
-                    resivedNews.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
-                }          
+                }else {
+                    console.log();
+                    resivedNews.innerHTML = 'An error occurred during your request: ';
+                } 
+            }         
         }
         request.open("GET", url);
         request.send();
