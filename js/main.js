@@ -42,7 +42,8 @@ function validatFormFild() {
     }
 
 }
-
+var addNews = document.querySelector("#hideitem"); // Element that is going to call the action
+addNews.addEventListener("click", xmlRequest);
 var xmlRequest = new XMLHttpRequest();
 xmlRequest.onreadystatechange = function(){
     if (xmlRequest.readystate === 4){
