@@ -18,17 +18,21 @@ xhr.onreadystatechange = function () {
   if (xhr.readyState === 4) {
     if (xhr.status === 200) {
       var data = JSON.parse(xhr.responseText);
+      console.log(data)
       var textBox = document.querySelector('#newsInfo');
-      var heading = document.createElement('h2');
-      var paragraph = document.createElement('p');
-      heading.innerText = data[0].title;
-      paragraph.innerText = data[0].summary;
-      textBox.appendChild(heading);
-      textBox.appendChild(paragraph);
-      // textBox.innerHTML = data[0].title +  data[0].summary;
-      
+
+      for (var i = 0; i < data.length; i++) {
+        var heading = document.createElement('h2');
+        var paragraph = document.createElement('p');
+        heading.innerText = data[i].title;
+        paragraph.innerText = data[i].summary;
+        textBox.appendChild(heading);
+        textBox.appendChild(paragraph);
+
+      }
+
     } else {
-      //there is an error
+
     }
   }
 }
