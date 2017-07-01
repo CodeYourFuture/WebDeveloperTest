@@ -5,135 +5,57 @@ window.addEventListener('load', function () {
         const name = document.getElementById('name');
         const email = document.getElementById('email');
         const phoneNumber = document.getElementById('phoneNumber');
-
+        function validEmail (email) {
+            return email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) 
+        }
+        function validName(name) {
+            return name.value !== "";
+        }
+        function validPhoneNumber(phoneNumber) {
+            return phoneNumber.value !== "" && phoneNumber.value.length < 12;
+        }
         // If the name, email and contact number valid execute this code
         /*==============================================================*/
-        if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
-            alert('Thank you for register with us');
-        // If the name & email valid but contact number not execute this code
+        if (validName(name) && validPhoneNumber(phoneNumber) && validEmail(email)) {
+                    alert('Thank you for register with us');
+        // If the name, email and contact number are not valid execute this code
+        /*====================================================================*/
+        }else if (!validName(name) && !validPhoneNumber(phoneNumber) && !validEmail(email)) {
+                    name.style.background = '#f00';
+                    email.style.background = '#f00';
+                    phoneNumber.style.background = '#f00';
+        // If the name and email are valid but phone number not execute this code
+        /*====================================================================*/
+        }else if(validName(name) && !validPhoneNumber(phoneNumber) && validEmail(email)) {
+                    phoneNumber.style.background = '#f00';
+        // If the name and phone number are valid but email not execute this code
         /*==================================================================*/
-        } else if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
-            if (name.value !== "" && email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
-                phoneNumber.style.background = '#f00';
-                // If the name valid but contact number & email are not execute this code
-                /*==================================================================*/
-            } else if (name.value !== "" || email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
-                if (name.value !== "") {
+        }else if(validName(name) && validPhoneNumber(phoneNumber) && !validEmail(email)) {           
+                    email.style.background = '#f00';
+        // If the email and phone number are valid but name not execute this code
+        /*==================================================================*/
+        }else  if(!validName(name) && validPhoneNumber(phoneNumber) && validEmail(email)) {
+                    name.style.background = '#f00';
+        // If the name is valid but email and phone number are not execute this code
+        /*==================================================================*/
+        }else if(validName(name) && !validPhoneNumber(phoneNumber) && !validEmail(email)) {
                     email.style.background = '#f00';
                     phoneNumber.style.background = '#f00';
-                    // If the email valid but contact number & name are not execute this code
-                /*==================================================================*/
-                } else if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
+        // If the email is valid but name and phone number are not execute this code
+        /*==================================================================*/
+        } else if(!validName(name) && !validPhoneNumber(phoneNumber) && validEmail(email)) {
                     name.style.background = '#f00';
                     phoneNumber.style.background = '#f00';
-                } else {
-                    alert('error');
-                }
-            }
-        } else if (name.value !== "" && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
-            // If the name & contact number valid but email not execute this code
-            /*==================================================================*/
-            if (name.value !== "" && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
-                email.style.background = '#f00';
-            // If the name is valid but contact number & email are not execute this code
-            /*==================================================================*/
-            } else if (name.value !== "" || phoneNumber.value !== "" && phoneNumber.value.length < 12) {
-                if (name.value !== "") {
-                    email.style.background = '#f00';
-                    phoneNumber.style.background = '#f00';
-                    // If the contact unmber is valid but name & email are not execute this code
-                    /*==================================================================*/
-                } else if (phoneNumber.value !== "" && phoneNumber.value.length < 12) {
+        // If the phone number is valid but email and name are not execute this code
+        /*==================================================================*/
+        }else if(!validName(name) && validPhoneNumber(phoneNumber) && !validEmail(email)) {
                     name.style.background = '#f00';
                     email.style.background = '#f00';
-                } else {
+        }else {
                     alert('error');
-                }
-            }
-        } else if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
-            // If the email & contact number are valid but name is not execute this code
-            /*==================================================================*/
-            if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) && phoneNumber.value !== "" && phoneNumber.value.length < 12) {
-                name.style.background = '#f00';
-            } else if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) || phoneNumber.value !== "" && phoneNumber.value.length < 12) {
-                // If the email is valid but name & contact number are not execute this code
-                /*==================================================================*/
-                if (email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2)) {
-                    name.style.background = '#f00';
-                    phoneNumber.style.background = '#f00';
-                    // If the contact number is valid but name & email are not execute this code
-                    /*==================================================================*/
-                } else if (phoneNumber.value !== "" && phoneNumber.value.length < 12) {
-                    name.style.background = '#f00';
-                    email.style.background = '#f00';
-                } else {
-                    alert('error');
-                }
-            }
-            // If the email, name & contact number are not execute this code
-            /*==================================================================*/
-        } else if (name.value === "" && email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) && phoneNumber.value === "" || phoneNumber.value.length > 11) {
-            name.style.background = '#f00';
-            email.style.background = '#f00';
-            phoneNumber.style.background = '#f00';
-        } else if (name.value === "" && email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
-            // If the contact number is valid but email, name are not execute this code
-            /*==================================================================*/
-            if (name.value === "" && email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
-                name.style.background = '#f00';
-                email.style.background = '#f00';
-                // If the contact number & email are valid but name is not execute this code
-                /*==================================================================*/
-            } else if (name.value === "" || email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
-                if (name.value === "") {
-                    name.style.background = '#f00';
-                    // If the contact number & name are valid but email is not execute this code
-                    /*==================================================================*/
-                } else if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
-                    email.style.background = '#f00';
-                } else {
-                    alert('error');
-                }
-            }
-        } else if (name.value === "" && phoneNumber.value === "" || phoneNumber.value.length > 11) {
-                // If the email is valid but name & contact number are not execute this code
-                /*==================================================================*/
-            if (name.value === "" && phoneNumber.value === "" || phoneNumber.value.length > 11) {
-                name.style.background = '#f00';
-                phoneNumber.style.background = '#f00';
-                // If the contact number & email are valid but name is not execute this code
-                /*==================================================================*/
-            } else if (name.value === "" && phoneNumber.value === "" || phoneNumber.value.length > 11) {
-                if (name.value === "") {
-                    name.style.background = '#f00';
-                    // If the name & email are valid but contact number is not execute this code
-                    /*==================================================================*/
-                } else if (phoneNumber.value === "" || phoneNumber.value.length > 11) {
-                    phoneNumber.style.background = '#f00';
-                } else {
-                    alert('error');
-                }
-            }
-        } else if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) && phoneNumber.value === "" || phoneNumber.value.length > 11) {
-                // If the name is valid but contact number & email are not execute this code
-                /*==================================================================*/
-            if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) && phoneNumber.value === "" || phoneNumber.value.length > 11) {
-                email.style.background = '#f00';
-                phoneNumber.style.background = '#f00';
-            } else if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2) || phoneNumber.value === "" || phoneNumber.value.length > 11) {
-                // If the name & contact number are valid but email is not execute this code
-                /*========================================================================*/
-                if (email.value.indexOf("@") === 0 || email.value.indexOf("@") === -1 || email.value.indexOf(".") === -1 || email.value.lastIndexOf("@") > email.value.lastIndexOf(".") || email.value.lastIndexOf(".") > (email.value.length - 2)) {
-                    email.style.background = '#f00';
-                    // If the name & email are valid but contact number is not execute this code
-                    /*==================================================================*/
-                } else if (phoneNumber.value === "" || phoneNumber.value.length) {
-                    phoneNumber.style.background = '#f00';
-                } else {
-                    alert('error');
-                }
-            }
+                    return false;
         }
+
     });
 }, false);
 /*==================== Start AJAX Get Data===================*/
