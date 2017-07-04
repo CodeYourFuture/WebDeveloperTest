@@ -40,26 +40,33 @@ function validatFormFild() {
         emailAddress.value = '';
         contactPhone.value = '';
     }
-
 }
-var addNews = document.querySelector("#hideitem"); // Element that is going to call the action
-addNews.addEventListener("click", xmlRequest);
-var xmlRequest = new XMLHttpRequest();
-xmlRequest.onreadystatechange = function(){
-    if (xmlRequest.readystate === 4){
-        if(xmlRequest.status === 200){
-            var data = JSON.parse(xmlRequest.responseText);
-            var textBox = document.querySelector('#newsInfo');
-            textBox.innerHTML = data[0].title + data[0].summary;
-            console.log(data[0].title);
-            console.log(data[0].summary);
-        }else{
-            alert('there is an error');
+
+
+var btn = document.getElementById('hideitem');
+btn.addEventListener('click', ourRequest);
+var ourRequest = new XMLHttpRequest();
+var addContainer = document.getElementById('news');
+
+ourRequest.onreadystatechange = function () {
+    var ourData = JSON.parse(ourRequest.responseText);
+    if (ourRequest.readyState === 4) {
+        if (ourRequest.status === 200) {
+            renderHTML(ourData).innerHTML = ourRequest.responseText;
+        } else {
+            renderHTML(ourData).innerHTML = 'An error occurred during your request: ' + ourRequest.status + ' ' + ourRequest.statusText;
         }
-    }
-}
-xmlRequest.open('Get', 'https://private-e99507-kabaros.apiary-mock.com/news');
-xmlRequest.send();
 
-console.log(xmlRequest.status);
-console.log(xmlRequest.statusText);
+    }
+    ourRequest.open('GET', 'https://private-e99507-kabaros.apiary-mock.com/news');
+    ourRequest.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+    ourRequest.send();
+};
+function renderHTML(ourData) {
+    var htmlString = "";
+    for (i = 0; i < ourData.length; i++) {
+        htmlString += "<h5>" + ourData[i].title + "</h5>" + "<p>" + data[i].summary + "</p>";
+    }
+    displayInfo.insertAdjacentHTML("beforeend", htmlString);
+
+}
