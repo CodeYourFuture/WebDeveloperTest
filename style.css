@@ -7,8 +7,8 @@ body{
 .website-title{
     color:white;
     font-size: 57px;
+    font-family:Monotype Corsiva, Times, serif;
 }
-
 ul {
  list-style-type: none; 
     margin: 0;
@@ -36,11 +36,9 @@ ul.links a{
     font-size: 20px;
     margin-bottom: 20px;
 }
-
 a {
     text-decoration: none !important;
 }
-
 /* header style */
 
 .articles .title{
@@ -87,7 +85,7 @@ a {
 
 .article-body-item{
        color: white;
-    font-size: 26px;
+    font-size: 20px;
 }
 
 .dropdown-menu{
@@ -118,20 +116,25 @@ div#main.articles  {
     width:75%;
 }
 
+.hide{
+display: none;
+}
 
-a#drop{
+a{
   
      color:#E51955;
-    font-size:1em;
-    background-image: url('assets/arrodw.png');
+    font-size:1.2em;
+
   background-position: left no-repeat;
 
    
 }
 
-a#drop:before {
+a#show:before {
     display: inline-block;
-    
+    position: relative;
+    top: 15px;
+
 content: url('assets/arrow.png');
 
 }
@@ -144,15 +147,40 @@ content: url('assets/arrow.png');
 }
 
 #drop2{
-    color:white;
-    font-size: 18px;
+    color: whitesmoke;
+    font-size: 16px;
      font-family: sans-serif;
      margin-left: 120px;
+}
+
+.ajaxTitle{
+color: grey;
+    font-size: 22px;
+     font-family: sans-serif;
+     margin-bottom: -11px;
+     
+}
+
+.ajaxSummary{
+color: whitesmoke;
+    font-size: 16px;
+     font-family: sans-serif;
+     margin-left: 44px;
 }
 /* Form style */
 form{
     color: white;
 }
+
 #useremail , #userphone{
     width: 300px;
+}
+
+.content{
+display: none;
+}
+
+.content.active,
+.no-js .showhide {
+  display: block;
 }
