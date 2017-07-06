@@ -5,91 +5,69 @@ window.addEventListener('load', function () {
         const name = document.getElementById('name');
         const email = document.getElementById('email');
         const phoneNumber = document.getElementById('phoneNumber');
-        function validEmail (email) {
-            return email.value.indexOf("@") !== 0 && email.value.indexOf("@") !== -1 && email.value.indexOf(".") !== -1 && email.value.lastIndexOf("@") < email.value.lastIndexOf(".") && email.value.lastIndexOf(".") < (email.value.length - 2) 
-        }
         function validName(name) {
             return name.value !== "";
+        }
+        function validEmail(email) {
+            const pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+            return pattern.test(email.value);
         }
         function validPhoneNumber(phoneNumber) {
             return phoneNumber.value !== "" && phoneNumber.value.length < 12;
         }
-        // If the name, email and contact number valid execute this code
-        /*==============================================================*/
-        if (validName(name) && validPhoneNumber(phoneNumber) && validEmail(email)) {
-                    alert('Thank you for register with us');
-        // If the name, email and contact number are not valid execute this code
-        /*====================================================================*/
-        }else if (!validName(name) && !validPhoneNumber(phoneNumber) && !validEmail(email)) {
-                    name.style.background = '#f00';
-                    email.style.background = '#f00';
-                    phoneNumber.style.background = '#f00';
-        // If the name and email are valid but phone number not execute this code
-        /*====================================================================*/
-        }else if(validName(name) && !validPhoneNumber(phoneNumber) && validEmail(email)) {
-                    phoneNumber.style.background = '#f00';
-        // If the name and phone number are valid but email not execute this code
-        /*==================================================================*/
-        }else if(validName(name) && validPhoneNumber(phoneNumber) && !validEmail(email)) {           
-                    email.style.background = '#f00';
-        // If the email and phone number are valid but name not execute this code
-        /*==================================================================*/
-        }else  if(!validName(name) && validPhoneNumber(phoneNumber) && validEmail(email)) {
-                    name.style.background = '#f00';
-        // If the name is valid but email and phone number are not execute this code
-        /*==================================================================*/
-        }else if(validName(name) && !validPhoneNumber(phoneNumber) && !validEmail(email)) {
-                    email.style.background = '#f00';
-                    phoneNumber.style.background = '#f00';
-        // If the email is valid but name and phone number are not execute this code
-        /*==================================================================*/
-        } else if(!validName(name) && !validPhoneNumber(phoneNumber) && validEmail(email)) {
-                    name.style.background = '#f00';
-                    phoneNumber.style.background = '#f00';
-        // If the phone number is valid but email and name are not execute this code
-        /*==================================================================*/
-        }else if(!validName(name) && validPhoneNumber(phoneNumber) && !validEmail(email)) {
-                    name.style.background = '#f00';
-                    email.style.background = '#f00';
-        }else {
-                    alert('error');
-                    return false;
+        if (validName(name) && validName(name) && validPhoneNumber(phoneNumber)) { alert('Thank you for register with us')}
+
+        if (validName(name)) {
+                return true;
+                name.classList.remove('error');
+        }else{
+                name.classList.add('error');
+        }
+
+        if (validName(name)) {
+                alert('yeas');
+                return true;
+                email.classList.remove('error');
+        }else{
+                email.classList.add('error');
+        }
+        
+        if (validPhoneNumber(phoneNumber)) {
+                phoneNumber.classList.remove('error');
+                return true;
+        }else{
+                phoneNumber.classList.add('error');
         }
 
     });
 }, false);
 /*==================== Start AJAX Get Data===================*/
 window.addEventListener('load', function () {
-    const resivedNews = document.getElementById('resivedNews');
-resivedNews.style.display = 'none';
-const showNews = document.querySelector('#showNews');
-const url = "https://private-e99507-kabaros.apiary-mock.com/news";
-var request = new XMLHttpRequest();
-    showNews.addEventListener('click', function (event) {
-        event.preventDefault();
-        request.onreadystatechange = function () {
-            if (request.readyState === 4 ){
-                if (request.status === 200) {
-                    const data = JSON.parse(request.responseText);
-                    for (i = 0; i < data.length; i++) {                       
-                        resivedNews.innerHTML += "<h2>"+data[i].title+"</h2>"+"<br>"+ "<p>"+data[i].summary+".</p><br>";
-                    }
-                    resivedNews.style.display = 'block';
-                }else {
-                    console.log();
-                    resivedNews.innerHTML = 'An error occurred during your request: ';
-                } 
-            }         
-        }
-        request.open("GET", url);
-        request.send();
-    });
+const resivedNews = document.getElementById('resivedNews');
 
-    const hideNews = document.querySelector('#hideNews');
-    hideNews.addEventListener('click', function () {
-        resivedNews.style.display = 'none';
+const request = new XMLHttpRequest();
+request.onreadystatechange = function () {
+    if (request.readyState === 4 ){
+        if (request.status === 200) {
+            const data = JSON.parse(request.responseText);
+            for (i = 0; i < data.length; i++) {                       
+                resivedNews.innerHTML += "<h2>"+data[i].title+"</h2>"+"<br>"+ "<p>"+data[i].summary+".</p><br>";
+            }
+            }else {
+                resivedNews.innerHTML = 'An error occurred during your request: ';
+            }
+        }         
+    }
+    const url = "https://private-e99507-kabaros.apiary-mock.com/news";
+    request.open("GET", url);
+    request.send();
+    const showAndHide = document.querySelector('#showAndHide');
+    showAndHide.addEventListener('click', function (event) {
+        event.preventDefault();
+            resivedNews.classList.toggle('hiddenShow');
     });
 });
+
 
 
 
