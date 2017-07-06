@@ -20,17 +20,17 @@ body{
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 50px;
-    padding-bottom: 150px;
+    padding: 0 1em;
+    padding-bottom: 2em;
 }
 /*============ Start Header ==============*/
 .logo{
-    padding: 40px 0 50px 0;
-    font-size: 60px;
+    padding: .6em 0 .8em 0.5em;
+    font-size: 4em;
 }
 nav .links{
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 nav .links li{
     display: inline-block;
@@ -39,35 +39,36 @@ nav .links li a{
     text-decoration: none;
     background: #131313;
     color: #fff;
-    padding: 3px 15px;
-    font-size: 18px;
-    box-shadow: 0px -4px 3px #e2d3d3;
+    padding: .2em 1em;
+    font-size: 1em;
+    box-shadow: 0 -0.2em 0.1em #e2d3d3;
 }
-/*================= first article ======================*/
+/*=============== first article ==============*/
 article .about-cyf{
     color: #e91a57;
-    margin-bottom: 20px;
-    font-size: 30px;
+    margin-bottom: .5em;
+    font-size: 2em;
+    margin-top: 0.8em;
 }
 article .what-we-do{
-    margin-bottom: 15px;
+    margin-bottom: 0.6em;
 }
 article .cyf-devintion{
     line-height: 1.6em;
-    margin-bottom: 10px;
-    margin-right: 120px;
+    margin-bottom: 1em;
+    margin-right: 5em;
 }
 article .our-focus{
     color: #ebdd00;
-    margin-bottom: 15px;
+    margin-bottom: 0.6em;
 }
 article .links{
     color: #fff;
-    margin-left: 20px;
+    margin-left: 2em;
 }
 article .footer{
     color: #ebdd00;
-    margin: 20px 0;
+    margin: 2em 0;
 }
 article .footer >a{
     text-decoration: none;
@@ -75,60 +76,66 @@ article .footer >a{
 }
 /*================= Second article ======================*/
 article .news{
-    margin-bottom: 10px;
+    margin-bottom: .8em;
 }
-article #showNews,
-article #hideNews{
+.hiddenShow{
+    display: none;
+}
+
+article #showAndHide{
     cursor: pointer;
 }
 article .showHideHeader{
     color: #e91a57;
-    margin-bottom: 15px;
+    margin-bottom: .5em;
 }
 article .news-first-pragraph{
-    margin-right: 120px;
+    margin-right: 5em;
 }
 article .news-second-pragraph{
-    margin: 15px 0 15px 120px;
+    margin: 1em 0 0 4em;
 }
 /*================= Start Section ======================*/
 section h1:first-child{
-    margin: 10px 0;
+    margin: .8em 0;
 }
 section .note{
-    margin-bottom: 20px;
+    margin-bottom: 1.5em;
 }
 section .required-field{
-    margin: 10px 0;
+    margin: .8em 0;
+}
+.error{
+    background: #f00;
 }
 section form input[type='text']{
-    padding: 4px 5px;
-    margin: 5px 0;
+    padding: .4em .5em;
+    margin: .5em 0;
 }
 section form input[type='email']{
-    padding: 4px 100px 4px 5px;
-    margin: 5px 0;
+    padding: .4em 10em .4em .5em;
+    margin: .5em 0;
 }
 section form input[type='number']{
-    padding: 4px 100px 4px 5px;
+    padding: .4em 10em .4em .5em;
     margin: 5px 0;
 }
 section form button{
-    padding: 3px 4px;
-    margin: 5px 0;
+    padding: .3em .4em;
+    margin: .5em 0;
 }
 /*=============== Media query ================*/
-@media (max-width : 391px){
+@media (max-width : 39em){
     nav .links li a{
-    padding: 3px 3px;
+    padding: .3em .3em;
 }
 section form input[type='email'],
 section form input[type='number']{
-    padding: 4px 60px 4px 5px;
+    padding: .4em 6em .4em .5em;
 }
 /*============ Max-wdth 592 =============*/
 }
-@media (max-width : 592px){
+@media (max-width : 59.2em){
     .container{
     width: 100%;
     margin-left: auto;
@@ -141,6 +148,6 @@ article .news-first-pragraph{
     margin-right: 0;
 }
 article .news-second-pragraph{
-    margin: 15px 0 15px 10px;
+    margin: 1.5em 0 1.5em 1em;
 }
 }
