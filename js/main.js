@@ -42,31 +42,33 @@ function validatFormFild() {
     }
 }
 
+var addNews = document.querySelector("#hideitem"); 
+addNews.addEventListener("click", ourRequest);
 
-var btn = document.getElementById('hideitem');
-btn.addEventListener('click', ourRequest);
-var ourRequest = new XMLHttpRequest();
-var addContainer = document.getElementById('news');
+var ourRequest = new XMLHttpRequest(); 
+var url = "https://private-e99507-kabaros.apiary-mock.com/news";
+var addContainer = document.getElementById("news");
 
 ourRequest.onreadystatechange = function () {
-    var ourData = JSON.parse(ourRequest.responseText);
-    if (ourRequest.readyState === 4) {
-        if (ourRequest.status === 200) {
-            renderHTML(ourData).innerHTML = ourRequest.responseText;
+    var data = JSON.parse(ourRequest.responseText); 
+    if (ourRequest.readyState === 4) {  
+        if (ourRequest.status === 200) {     
+            renderHTML(data).innerHTML = ourRequest.responseText;
         } else {
-            renderHTML(ourData).innerHTML = 'An error occurred during your request: ' + ourRequest.status + ' ' + ourRequest.statusText;
+            renderHTML(data).innerHTML = 'An error occurred during your request: ' 
+            + ourRequest.status + ' ' + ourRequest.statusText;
         }
-
     }
 };
-    ourRequest.open('GET', 'https://private-e99507-kabaros.apiary-mock.com/news');
-    ourRequest.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-    ourRequest.send();
-function renderHTML(ourData) {
+
+ourRequest.open("GET", url);                    
+ourRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
+ourRequest.send();                                
+
+function renderHTML(data) {
     var htmlString = "";
-    for (i = 0; i < ourData.length; i++) {
-        htmlString += "<h5>" + ourData[i].title + "</h5>" + "<p>" + data[i].summary + "</p>";
+    for (i = 0; i < data.length; i++) {
+        htmlString += "<h5>" + data[i].title + "</h5>" + "<p>" + data[i].summary + "</p>";
     }
     addContainer.insertAdjacentHTML("beforeend", htmlString);
-
 }
