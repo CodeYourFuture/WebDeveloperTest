@@ -58,15 +58,15 @@ ourRequest.onreadystatechange = function () {
         }
 
     }
+};
     ourRequest.open('GET', 'https://private-e99507-kabaros.apiary-mock.com/news');
     ourRequest.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
     ourRequest.send();
-};
 function renderHTML(ourData) {
     var htmlString = "";
     for (i = 0; i < ourData.length; i++) {
         htmlString += "<h5>" + ourData[i].title + "</h5>" + "<p>" + data[i].summary + "</p>";
     }
-    displayInfo.insertAdjacentHTML("beforeend", htmlString);
+    addContainer.insertAdjacentHTML("beforeend", htmlString);
 
 }
