@@ -1,5 +1,5 @@
 
-var News = document.getElementById('News');   
+var news = document.getElementById('News');   
 var url = "https://private-e99507-kabaros.apiary-mock.com/news";                                     //server location
 var request = new XMLHttpRequest();
 request.open('GET',url)
@@ -20,8 +20,8 @@ function renderHTML(data){
 }
 
 
-var SHnews = document.querySelector('#news-btn');
-SHnews.addEventListener('click', ShowHideNews);
+var showHideNews = document.querySelector('#news-btn');
+showHideNews.addEventListener('click', ShowHideNews);
 
 function ShowHideNews() {
     ShowHide(document.querySelector('#News'));
@@ -50,14 +50,14 @@ function submitForm(event) {
     event.preventDefault();
 
     var nameInput = document.querySelector('#example-name-input');
-    var nameInputWV = nameInput.value;
+    var nameInputWithValue = nameInput.value;
     var emailInput = document.querySelector('#example-email-input');
     var emailInputWV = emailInput.value;
     var numberInput = document.querySelector('#example-phone-input');
     var numberInputWV = numberInput.value;
 
     var SubmitFormIsValid = true;
-    if (nameInputWV.length === 0) {
+    if (nameInputWithValue.length === 0) {
         nameInput.className = 'nameInput inValid';
         SubmitFormIsValid = false;
     }

@@ -1,7 +1,7 @@
 .heading {
     font-family: 'Apple-Chancery', cursive;
     font-style: italic;
-    font-size: 60px;
+    font-size: 60em;
 }
 
  body {
@@ -25,24 +25,24 @@
 }
 
 .bordercontainer {
-    /*border: 3px solid blue;*/
+    /*border: 3em solid blue;*/
     /*display: flex;*/
-    margin-right: 29%;
-    margin-left: 3%;
-    margin-bottom: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 35%;
-    padding-top: 2%;
+    margin-right: 29em;
+    margin-left: 3em;
+    margin-bottom: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 35em;
+    padding-top: 2em;
 }
 
 .submitbox {
-    /*border: 4px solid hotpink;*/
+    /*border: 4em solid hotpink;*/
     padding-top: 1%;
     padding-bottom: 1%;
 }
 .submitform {
-    /*border: 2px solid yellow;*/
+    /*border: 2em solid yellow;*/
     display: flex;
     padding-bottom: 1%;
     padding-top: 2%;
@@ -63,7 +63,7 @@
     padding-left: 10%;
 }
 .biggertext {
-    font-size: 25px;
+    font-size: 25em;
 }
 
 .listIndentation {
@@ -78,20 +78,20 @@
     display: none;
 }
 
-nav-bar button {
+nav button {
     color: white;
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    font-size: 20em;
+    padding-left: 20em;
+    padding-right: 20em;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
     background: #4c4c4c; /* Old browsers */
     background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
-    box-shadow:2px 4px 8px 0 rgba(255, 255, 255, 0.5)
+    box-shadow:2em 4em 8em 0 rgba(255, 255, 255, 0.5)
 }
 
-nav-bar button:hover {
-    box-shadow:12px 15px 20px 0 rgba(255, 255, 255, 0.5)
+nav button:hover {
+    box-shadow:12em 15em 20em 0 rgba(255, 255, 255, 0.5)
 }
