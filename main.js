@@ -1,5 +1,5 @@
 
-var news = document.getElementById('News');   
+var news = document.getElementById('news');   
 var url = "https://private-e99507-kabaros.apiary-mock.com/news";                                     //server location
 var request = new XMLHttpRequest();
 request.open('GET',url)
@@ -16,7 +16,7 @@ function renderHTML(data){
     for (i = 0; i < data.length; i++) {
         htmlString += "<p>" + data[i].title + "</p>" + "<p>" + data[i].summary + "</p>";
     }
-    News.insertAdjacentHTML('beforeend',htmlString);
+    news.insertAdjacentHTML('beforeend',htmlString);
 }
 
 
@@ -24,7 +24,7 @@ var showHideNews = document.querySelector('#news-btn');
 showHideNews.addEventListener('click', ShowHideNews);
 
 function ShowHideNews() {
-    ShowHide(document.querySelector('#News'));
+    ShowHide(document.querySelector('#news'));
 }
 
 function ShowHide(element) {
@@ -35,11 +35,11 @@ function ShowHide(element) {
     }
 }
 
-var MInfoButton = document.querySelector('.MInfo');
-MInfoButton.addEventListener('click', News);
+var moreInfoButton = document.querySelector('.moreInfo');
+moreInfoButton.addEventListener('click', news);
 
-function News() {
-    ShowHide(document.querySelector('#News p'));
+function news() {
+    ShowHide(document.querySelector('#news p'));
 }
 
 var submitButton = document.querySelector('.submitBtn');
