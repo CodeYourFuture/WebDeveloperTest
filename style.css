@@ -1,0 +1,42 @@
+body {
+    color: white;
+    background-image: url("assets/background.png");
+    background-size: 100% 100%;
+}
+
+.heading {
+    color: gray;
+}
+
+.about {
+    color: #9A0A35;
+}
+
+.focus {
+    color: yellow;
+}
+
+.Click {
+    color: yellow;
+}
+
+.show {
+    color: #9A0A35;
+}
+
+button {
+    background: linear-gradient(to bottom, #000000 0%, #434343 100%);
+    color: white;
+}
+
+input {
+    width: 300px
+}
+
+.shortname {
+    width: 150px
+}
+
+.submit {
+    width: 60px
+} 
