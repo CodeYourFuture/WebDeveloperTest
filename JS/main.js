@@ -32,15 +32,15 @@ request.send();
 
 // Show/Hide Function
 function showHide(event) {
-    event.preventDefault();
+    event.preventDefault();    
     if (news.style.display === "") {
-        news.style.display = "none";
+        $( "#news" ).hide( "slow" );
     }
     else if (news.style.display === "none") {
-        news.style.display = "block";
+        $( "#news" ).show( "slow" );
     }
     else {
-        news.style.display = "none";
+         $( "#news" ).hide( "slow" );
     }
 }
 
@@ -49,16 +49,33 @@ function showHide(event) {
 var textEmail = document.querySelector('#InputEmail');
 var textName = document.querySelector('#text-input-name');
 var textPhone = document.querySelector('#text-input-phone');
+var inputName = document.querySelector('#inputName');
+var inputEmail = document.querySelector('#inputEmail');
+var inputNumber = document.querySelector('#inputNumber');
+
+
+
+//alarms messages
+var alertNameField = document.createElement("p");
+alertNameField.innerText = "This filed is required,Please type letters only";
+alertNameField.className = 'nameAlert';
+var alertEmailField = document.createElement("p");
+alertEmailField.innerText = "This filed is required,Please enter email like:- Example@XX.XX";
+alertEmailField.className = 'emailAlert';
+var alertContactField = document.createElement("p");
+alertContactField.innerText = "Please enter maxsimum 11 numbers";
+alertContactField.className = 'contactAlert';
+
 //submit button
 var sbumitButton = document.querySelector('form .btn-primary');
 sbumitButton.addEventListener('click', submitForm);
 //submit function
 function submitForm(event) {
     event.preventDefault();
-    checkEmail();
-    checkName();
-    checkNumber();
-    if (checkEmail() && checkName()) {
+    var checkValideEmail = checkEmail();
+    var checkValideName = checkName();
+    var checkValideNumber = checkNumber();
+    if (checkValideEmail && checkValideName) {
         textEmail.value = "";
         textName.value = "";
         textPhone.value = "";
@@ -70,32 +87,42 @@ function submitForm(event) {
 //check text in email field 
 function checkEmail() {
     if (textEmail.value.length <= 0 || textEmail.value.indexOf('@') < 0 || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(textEmail.value))) {
-        textEmail.style.backgroundColor = "red";
+        inputEmail.appendChild(alertEmailField);
     }
     else {
-        textEmail.style.backgroundColor = "white";
+        if ($('p.emailAlert').length === 1) {
+            inputEmail.removeChild(alertEmailField);
+        }
         return true;
     }
 }
+
 //check text in name field 
 function checkName() {
     if (textName.value.length <= 0 || /\d/.test(textName.value) || /[~`!#$%\^&*+=\-\[\]\\';,/{}.|\\":<>\?]/.test(textName.value)) {
-        textName.style.backgroundColor = "red";
+        inputName.appendChild(alertNameField);
     }
     else {
-        textName.style.backgroundColor = "white";
+        if ($('p.nameAlert').length === 1) {
+            inputName.removeChild(alertNameField);
+        }
         return true;
     }
 }
+
 //check text in number field 
 function checkNumber() {
     if (!(/[~`!#$%\^&*+=\-\[\]\\';,/{}.|\\":<>\?]/g.test(textPhone.value)) && textPhone.value.length < 11 && (!(/[A-Za-z]/.test(textPhone.value)) || textPhone.value.length === 0)) {
-        textPhone.style.backgroundColor = "white";
+        if ($('p.contactAlert').length === 1) {
+            inputNumber.removeChild(alertContactField);
+        }
         return true;
     }
     else {
-        textPhone.style.backgroundColor = "red";
+        inputNumber.appendChild(alertContactField);
         return false;
     }
 }
+
+
 

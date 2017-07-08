@@ -11,7 +11,7 @@
     <div class="site-header">
         <h1 class="website-title">CYF</h1>
         <!-- Navigate bar-->
-        <div class="navbar">
+        <div class="navbar" >
             <button id="Menu1" type="button" class="btn btn-primary">Menu 1</button>
             <button id="Menu2" type="button" class="btn btn-primary">Menu 2</button>
             <button id="Menu3" type="button" class="btn btn-primary">Menu 3</button>
@@ -65,12 +65,14 @@
             <ul class="article-body-control">
                 <li><a href="#" id="controlElement">Show/Hide news items</a></li>
             </ul>
+
             <div class="article-body" id="news">
 
             </div>
+
         </article>
         <!--Fourth Article_ Form-->
-        <article class="article fourth">
+        <article class="article fourth" >
             <div class="article-title ">
                 More information
             </div>
@@ -79,15 +81,15 @@
             </p>
             <p class="article-body">Items marked * are required fields</p>
             <form>
-                <div class="form-group">
+                <div class="form-group" id="inputName">
                     <label for="text-input-name">Contact name*:</label><br>
                     <input class="form-control" type="text" value="" id="text-input-name">
                 </div>
-                <div class="form-group">
+                <div class="form-group" id="inputEmail">
                     <label for="InputEmail">Contact Email address*:</label><br>
                     <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
                 </div>
-                <div class="form-group">
+                <div class="form-group" id="inputNumber">
                     <label for="text-input-phone">Contact phone number:</label><br>
                     <input class="form-control" type="text" value="" id="text-input-phone">
                 </div><br>
@@ -96,6 +98,8 @@
 
         </article>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="./JS/main.js"></script>
 
 </body>

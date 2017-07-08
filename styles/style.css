@@ -78,3 +78,8 @@ form{
 #InputEmail , #text-input-phone{
     width: 300px;
 }
+p.nameAlert, .emailAlert,.contactAlert{
+    font-size: 1em;
+    color: red;
+    margin: 1px;
+}
