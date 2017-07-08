@@ -2,8 +2,11 @@
     margin: 0;
     padding: 0;
     color: red;
-}
+} 
+.showOne{
+margin-left:100px;
 
+}
 body {
     background-image: url(../background.png);
     background-repeat: no-repeat;

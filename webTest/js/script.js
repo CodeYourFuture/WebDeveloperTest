@@ -58,13 +58,51 @@ prBtn.addEventListener('click', function() {
 
 
         } else {
-            alert("add @")
+            alert("add @");
         }
     } else {
-        alert("Plz Add The iteam marked * ")
+        alert("Plz Add The iteam marked * ");
     }
 
 
     event.preventDefault();
 
 });
+
+
+
+var request = new XMLHttpRequest(); //creating a request object
+
+request.onreadystatechange = function() {
+    var pargraph = document.querySelector(".showOne");
+    if (request.readyState === 4) { // check if a response was sent back
+        if (request.status === 200) { // check if request was successful
+            var sendMsg = JSON.parse(request.responseText);
+
+            console.log(sendMsg[0]);
+            for (var i = 0; i < sendMsg.length; i++) {
+                var sendInformationTitle = sendMsg[i].title;
+                var sendInformationParg = sendMsg[i].summary;
+
+                var newsTitle = document.createElement('h1')
+                var newsPargraph = document.createElement('p')
+
+                newsTitle.innerHTML = sendInformationTitle;
+                newsPargraph.innerHTML = sendInformationParg;
+
+                pargraph.appendChild(newsTitle);
+                pargraph.appendChild(newsPargraph);
+            }
+
+
+
+        } else {
+            consloe.log('An error occurred during your request: ' + request.status + ' ' + request.statusText);
+        }
+    }
+}
+var url = "https://private-e99507-kabaros.apiary-mock.com/news"; //server location
+request.open("GET", url); // adding it to the request
+
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); //header info
+request.send();
