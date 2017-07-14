@@ -1,0 +1,90 @@
+
+body{
+     background-image: url("background.png");
+   background-size: cover;
+   color: white;
+
+};
+
+
+#headLogo{
+    font-family: 'Apple-Chancery', cursive;
+   font-style: italic;
+   font-size: 60px;
+}
+.container{
+     width: 75%;
+     margin-left: auto;
+    margin-right: auto;}
+    nav .links li{
+     display: inline-block;
+
+ }
+ nav .links li a{
+     text-decoration: none;
+     background: #131313;
+     color: #fff;
+     padding: 3px 15px;
+     font-size: 18px;
+     box-shadow: 0px -4px 3px #e2d3d3;
+ }
+ article .about-cyf{
+     color: #e91a57;
+     margin-bottom: 20px;
+     font-size: 30px;
+ }
+ article .what-we-do{
+     margin-bottom: 15px;
+    
+ }
+ article .cyf-devintion{
+     line-height: 1.6em;
+     margin-bottom: 10px;
+     margin-right: 120px;
+ }
+ .our-focus{
+     color: #ebdd00;
+     margin-bottom: 15px;
+ }
+ .footer{
+     color: #ebdd00;
+ }
+ .footer >span{
+     font-style: italic;
+     color: blue;
+     cursor: pointer;
+ }
+ #showHide{
+     cursor: pointer;
+ }
+ .show-hide-news{
+     display: none;
+
+ }
+ .showHideHeader{
+     color: #e91a57;
+ }
+ .Itaic.news-second-pragraph{
+     position: relative;
+    left: 60px;
+}
+     
+ 
+ /*============ Max-wdth 592 =============*/
+ @media (max-width : 592px){
+     .container{
+     width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ article .cyf-devintion{
+     margin-right: 0;
+ }
+ article .news-first-pragraph{
+     margin-right: 0;
+ }
+ article .news-second-pragraph{
+     margin: 15px 0 15px 10px;
+ }
+ }  
+
