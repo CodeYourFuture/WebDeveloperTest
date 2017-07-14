@@ -10,23 +10,23 @@ function dosomething() {
     }
     var menu1 = document.querySelector('#email');
     var menu1value = menu1.value;
-    if (menu1value.length == 0) {
+    if (menu1value.indexOf("@") === -1) {
         alert("enter an email");
         return
     }
     var menu2 = document.querySelector('#phonenumber');
     var menu2value = menu2.value;
-    if (menu2value.length !== 11) {
+    if (menu2value.length  > 11) {
         alert("enter a phone number");
         return;
     }
     alert("Thank you for completing your information.");
 }
 var request = new XMLHttpRequest(); 	    //creating a request object
-
+var box = document.querySelector('#dynamicnews');
 request.onreadystatechange = function () {
     if (request.readyState === 4) {  // check if a response was sent back
-        var box = document.querySelector('#dynamicnews');
+        
         if (request.status === 200) { 	// check if request was successful
             var news = JSON.parse(request.responseText);
             var output = '';
@@ -50,3 +50,9 @@ request.send();
                        							// sending the request
 
 
+const showHide =document.getElementById("showHide");
+const showHideNews=document.getElementsByClassName("show-hide-news");
+showHide.addEventListener("click",function (event) {
+    box.classList.toggle("show-hide-news");
+    event.preventDefault();
+})

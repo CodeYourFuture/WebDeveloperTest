@@ -49,10 +49,22 @@ body{
  .footer{
      color: #ebdd00;
  }
+ .footer >span{
+     font-style: italic;
+     color: blue;
+     cursor: pointer;
+ }
+ #showHide{
+     cursor: pointer;
+ }
+ .show-hide-news{
+     display: none;
+
+ }
  .showHideHeader{
      color: #e91a57;
  }
- .news-second-pragraph{
+ .Itaic.news-second-pragraph{
      position: relative;
     left: 60px;
 }
